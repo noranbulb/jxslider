@@ -1,0 +1,32 @@
+.jx-slider {position: relative;--overflow: hidden;}
+.jx-slider.jx-vertical {height: 100%;}
+.jx-slider .jx-box {position: relative;box-sizing: border-box; height: inherit; }
+.jx-slider .jx-box > .jx-wrap {position: relative;overflow: hidden;--width: 2000%;}
+.jx-slider .jx-box > .jx-wrap > .jx-unit {position: relative;float: left;display: block;background-color: #fff;perspective: 100px;}
+.jx-slider .jx-box > .jx-wrap > .jx-unit .jx-cont {position: relative;display: block;height: inherit;transform-style:preserve-3d;transform-origin: center center;--transform: rotateY(30deg);}
+.jx-slider .jx-box > .jx-wrap > .jx-unit .jx-cont .thumb {position: relative;display: block;--opacity:  .1;height: inherit;--transform-origin:center center;}
+.jx-slider .jx-box > .jx-wrap > .jx-unit img {width: 100%;display: block;}
+.jx-slider.jx-vertical .jx-box > .jx-wrap > .jx-unit img {width: auto;height: 100%;}
+.jx-slider .jx-box > .jx-wrap > .jx-unit .jx-cont .test {position: absolute;left: 10%;top:10%;color: #f00;font-size:  1.5em;}
+.jx-slider .jx-box > .jx-wrap > .jx-unit.on .jx-cont {opacity:1;--transform: rotateY(0deg);}
+.jx-slider .jx-box > .jx-wrap > .jx-unit.on .jx-cont .thumb {--opacity:1;}
+
+
+.jx-slider .jx-control {position: absolute;text-align: center;left: 0;bottom:0px;right: 0;}
+/*.jx-slider .jx-control {position: absolute;left: 0;bottom:150px;right: 0;}*/
+.jx-slider .jx-control > .jx-cbtn {display:inline-block;width: 30px;height: 30px;line-height: 30px;background-color:#333;border-radius: 50%;margin: 0 1%;color: #eee;box-sizing: border-box;color: #aaa;cursor: pointer;}
+.jx-slider .jx-control > .jx-cbtn.on {background-color:#000;color: #fff;}
+.jx-slider .jx-btn {position: absolute;top:40%;display:inline-block;width: 30px;height: 30px;line-height: 30px;border-radius: 50%;background-color:#aaa;text-align: center;color: #fff;cursor: pointer;}
+.jx-slider .jx-left {left: 10px;}
+.jx-slider .jx-right {right: 10px;}
+.jx-slider .jx-stop {position: relative; border: #000 solid 1px;display: inline-block;cursor: pointer;}
+.jx-slider .jx-stop.on {background-color: #aaa;}
+.jx-slider .jx-btn:hover {color: #eee;background-color:#222;}
+
+.jx-slider .jx-box > .jx-wrap > .jx-unit .num {position: absolute; left: 0; top: 0; }
+
+
+
+
+
+
