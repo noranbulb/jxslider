@@ -5,13 +5,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, user-scalable=no, target-densityDpi=device-dpi">
-    <link rel="stylesheet" href="resources/css/jxslider-ver-x3.css">
+    <!-- <link rel="stylesheet" href="resources/css/jxslider-ver-x3.css"> -->
+    <link rel="stylesheet" href="resources/css/jxslider-ver-x4.css">
 
     <!-- <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.9.1.js"></script> -->
     <script src="https://code.jquery.com/jquery-2.2.4.js"></script>
     <!-- <script src="https://code.jquery.com/jquery-migrate-1.2.1.js"></script> -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.js"></script>
-    <script src="resources/js/jxslider-ver-x10.js"></script>
+    <!-- <script src="resources/js/jxslider-ver-x10.js"></script> -->
+    <script src="resources/js/jxslider-ver-x11.js"></script>
     </script>
 
     <style>
@@ -19,15 +21,16 @@
     html,body {height: 100%;}
     body {overflow-x:hidden;}
     .title {background-color: #efefef;padding: 1%;}
-    .cont_box {margin: 50px auto;width: 80%;overflow:hidden;outline: #aaa dotted 3px;}
+    .cont_box {margin: 50px auto;width: 80%;overflow:hidden;outline: #aaa dotted 1px;}
     .cont_box_vertical {height: 500px;height: 30%;margin-bottom: 300px;}
     #jx-slider-17 {padding: 50px 0;overflow: hidden;}
     #jx-slider-17 .jx-box > .jx-wrap {overflow: initial;}
     </style>
+
 </head>
 
 <body>
-홍성준 pr test
+
 <div class="title">
     <h3>new JXSLIDER( $("#jx-slider-1") );</h3>
 </div>
@@ -362,8 +365,6 @@
                   settings: { nView: 1 }<br>
                 }<br>
             ] } );<br>
-
-
     </h3>
 </div>
 
@@ -421,13 +422,9 @@
                 <div class="jx-unit"><div class="jx-cont"><span class="thumb"><img src="resources/imgs/img_3.jpg" alt=""></span>
                     <p>향초</p>
                 </div></div>
-
             </div>
         </div>
-
     </div>
-
-
 </div>
 
 
@@ -438,7 +435,6 @@
     jx15.left();<br>
     jx15.right();<br>
     : 직접 만든 버튼을 이용하여 좌우 움직이기 메소드
-
     </h3>
 </div>
 <div class="cont_box">
@@ -470,7 +466,6 @@
     jx16.select( 숫자 )<br>
     직접 만든 버튼을 이용하여 원하는 객체로 이동<br>
     즉 옵션 bGroupMove = true면 페이징단위로 숫자를 넘겨야하고 false면 객체 순서되로 숫자를 넘기면 된다.<br>
-
     </h3>
 </div>
 <div class="cont_box">
@@ -498,10 +493,9 @@
 
 </div>
 
-
 <div class="title">
-    <h3>var jx17 = new JXSLIDER( $("#jx-slider-17") , { nView : 3 , nBackCopy :  1 , oEffect :
-        [ {name : 'scale', max : 1, min : .8 }, {name : 'rotateY', max : 0, min : 60 }, {name : 'opacity', max : 1, min : .5 } ]
+    <h3>var jx17 = new JXSLIDER( $("#jx-slider-17") , { nView:3, nBackCopy:1, bEffBalnce:false , oEffect :
+        [ {name : 'scale', max : 1, min : .5 }, {name : 'rotateY', max : 0, min : 40 }, {name : 'opacity', max : 1, min : .5 } ]
     }); <br>
     jx17.select( 숫자 )<br>
     직접 만든 버튼을 이용하여 원하는 객체로 이동<br>
@@ -538,6 +532,8 @@
     </div> -->
 
 </div>
+
+<br>
 
 
 
@@ -626,21 +622,23 @@
 
 
 
-    var jx17 = new JXSLIDER( $("#jx-slider-17") , { nView : 5 , bAction:true , nBackCopy :  2 , sEffectClass : 'thumb' ,
-        nMargin : 50
-        //, nOnMargin : 150
-        //, bResize : false
-        , oEffect :
+    var jx17 = new JXSLIDER( $("#jx-slider-17") , {
+        nView:3
+        ,nBackCopy:1
+        //,sEffectClass : 'thumb'
+        ,bEffBalnce: false
+        ,oEffect :
         [
             {
                 name : 'transform' ,
                 ef :
                 [
-                    {name : 'rotateY', max : 0, min : 0 },
-                    {name : 'scale', max : 1, min : .7 }
+                    {name : 'rotateY', max : 0, min : 40 }, //로케이션은 max을 0을 해야 가운데가 0도를 가진다. min 값을 주는게 좋음
+                    {name : 'scale', max : 1, min : .5 }
                 ]
-            } ,
-            {name : 'opacity', max : 1, min : .5 }
+            }
+            ,{name : 'opacity', max : 1, min : .5 }
+
         ]
     });
 
