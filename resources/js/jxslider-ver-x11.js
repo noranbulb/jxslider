@@ -6,6 +6,7 @@ date ( 날짜 ) : 2021.01.18
 
 수정
 oEffect: 효과 계산이 틀려서 공식을 수정하였고 비율 공식이 같은 패턴이 있어서 ratio() 함수로 재사용.
+cuv 계산법도 수정
 
 css도 jxslider-ver-x4.css (perspective값 수정) 한걸로 연결하면 좋다.)
 
@@ -822,13 +823,9 @@ JXSLIDER.prototype.addEnterFrame = function() {
       }
       var distance = pot - _this.nCenter; //기준 거리에서 본인의 거리를 빼서 거리를 잰다
 
-      //rotation 일경우 좌우 각도가 -1을 가질수도 있기 때문에
-      if ($(this).index() < _this.defaults.nBackCopy) {
-        cuv = 1;
-      }
-      if ($(this).index() > _this.defaults.nBackCopy) {
-        cuv = -1;
-      }
+      if ( distance < 0 ) {cuv = 1;}
+      if ( distance > 0 ) {cuv = -1;}
+
 
 
       var effectObj = $(this).find('.' + sClass);
